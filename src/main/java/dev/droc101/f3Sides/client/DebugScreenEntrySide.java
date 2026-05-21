@@ -5,6 +5,7 @@ import net.minecraft.util.StringRepresentable;
 import org.jspecify.annotations.NonNull;
 
 public enum DebugScreenEntrySide implements StringRepresentable {
+    AUTO("auto"),
     LEFT("left"),
     RIGHT("right");
 

@@ -1,5 +1,9 @@
 {
   "debug.entry.mode": "Show",
   "debug.entry.overlay": "In F3",
-  "debug.entry.never": "Never"
+  "debug.entry.never": "Never",
+  "debug.entry.left": "Left",
+  "debug.entry.auto": "Auto",
+  "debug.entry.right": "Right",
+  "debug.entry.side": "Side"
 }

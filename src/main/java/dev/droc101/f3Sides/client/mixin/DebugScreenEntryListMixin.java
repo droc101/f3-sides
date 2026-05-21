@@ -66,7 +66,6 @@ public abstract class DebugScreenEntryListMixin implements DebugScreenEntryListI
 
     @Inject(method="save", at=@At("TAIL"))
     void save(CallbackInfo ci) {
-        DebugScreenEntryList list = (DebugScreenEntryList) ((Object) this);
         SerializedSides serializedOptions = new SerializedSides(Optional.of(allSides));
 
         try {
@@ -97,7 +96,7 @@ public abstract class DebugScreenEntryListMixin implements DebugScreenEntryListI
 
     @Override
     public DebugScreenEntrySide f3sides$getSide(final Identifier location) {
-        return allSides.getOrDefault(location, DebugScreenEntrySide.LEFT);
+        return allSides.getOrDefault(location, DebugScreenEntrySide.AUTO);
     }
 
     @Unique

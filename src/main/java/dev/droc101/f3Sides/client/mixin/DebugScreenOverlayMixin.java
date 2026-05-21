@@ -35,6 +35,13 @@ public class DebugScreenOverlayMixin {
             if (!lines.isEmpty()) {
                 DebugScreenEntryList entries = Minecraft.getInstance().debugEntries;
                 DebugScreenEntrySide side = ((DebugScreenEntryListInterface) entries).f3sides$getSide(group.getKey());
+                if (side == DebugScreenEntrySide.AUTO) {
+                    if (leftLines.size() > rightLines.size()) {
+                        side = DebugScreenEntrySide.RIGHT;
+                    } else {
+                        side = DebugScreenEntrySide.LEFT;
+                    }
+                }
                 if (side == DebugScreenEntrySide.LEFT) {
 //                    leftLines.add(group.getKey().toString());
                     leftLines.addAll(lines);
